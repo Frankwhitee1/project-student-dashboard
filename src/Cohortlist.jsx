@@ -6,8 +6,10 @@ export default function CohortList({cohorts}) {
     return(
         <div>
             <p>Choose a Class by Start Date</p>
-            {uniqueCohorts.map((cohort) =>  
-            (<ul>{cohort.cohortCode}</ul>))}
+            <ul>
+            {uniqueCohorts.map((cohort) => (<li key={cohort.cohortCode}>{cohort.cohortCode}</li>))}
+
+            </ul>
             </div>
     );
 }

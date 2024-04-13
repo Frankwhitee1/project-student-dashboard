@@ -10,6 +10,6 @@ export default function Student({student}) {
         <p>{student.username}</p>
         <p>{new Date(student.dob).toLocaleDateString()}</p>
         </ul>
-        <ShowMore/>
+        <ShowMore student={student}/>
     </div>)
 }

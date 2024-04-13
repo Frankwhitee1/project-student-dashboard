@@ -1,4 +1,3 @@
-import ShowMore from "./ShowMore";
 import Student from "./data/student";
 
 export default function StudentList({ students }) {
@@ -7,9 +6,10 @@ export default function StudentList({ students }) {
         <h1>All Students</h1>
         <p>Total Students: {students.length}</p>
         <ul>
-        {students.map((student) => (
-             <Student student={student}/>
-        ))}
+        {students.map((student) => {
+            // console.log(student);
+             return <Student key={student.id} student={student}/>}
+        )}
         </ul>
       </div>
     );
