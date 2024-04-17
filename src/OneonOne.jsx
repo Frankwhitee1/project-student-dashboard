@@ -1,10 +1,9 @@
 import { useState } from "react";
-import Student from "./data/student";
 
 export default function OneOnOne({student}) {
     // console.log(student)
-    const [notes, setNotes]= useState(student.notes);
-    const [currentNote, setCurrentNote] = useState({
+    const [notes, setNotes]= useState(student.notes);// initial value is my students.notes
+    const [currentNote, setCurrentNote] = useState({ 
         commenter : "",
         comment : "",
     })
@@ -16,14 +15,12 @@ export default function OneOnOne({student}) {
             [event.target.id]: event.target.value})
     } 
 
-
+//handle submit button 
     const handleSubmit = (event)=> {
         event.preventDefault();
         setNotes([...notes, currentNote])
 
     }
-
-
 
     return (
         <div>

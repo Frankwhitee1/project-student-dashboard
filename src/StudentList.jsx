@@ -7,7 +7,6 @@ export default function StudentList({ students }) {
         <p>Total Students: {students.length}</p>
         <ul>
         {students.map((student) => {
-            // console.log(student);
              return <Student key={student.id} student={student}/>}
         )}
         </ul>
